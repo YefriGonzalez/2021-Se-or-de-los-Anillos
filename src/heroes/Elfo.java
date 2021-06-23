@@ -1,6 +1,7 @@
 package src.heroes;
 import src.main.*;
 import src.ente.*;
+import src.bestias.*;
 
 public class Elfo extends Heroe {
 
@@ -9,14 +10,17 @@ public class Elfo extends Heroe {
     }
     
     @Override
-    public int modificacionAtaque(Ente defensor){
-        if (defensor instanceof Elfo){
+    public int getAtaque(Ente ente){
+        if (ente instanceof Orco){
             System.out.println(" "+ this.getNombre() + " furia de un ELFO------ ");
-            return this.getAtaque() + 10;
-
+            return this.ataque + 10;
         }
-        
-        return this.getAtaque();
+        return this.ataque;
+    }
+
+    @Override
+    public void saludar(){
+        System.out.println("Soy un Elfo, mi nombre es: "+this.getNombre());
     }
 
 }

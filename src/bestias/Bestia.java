@@ -16,9 +16,12 @@ public class Bestia extends Ente {
         return bestiasCreadas;
     }
 
-    @Override
-    public int getAtaque(){
-        return Dado.tirarDado(0,ataqueMaximo,1);
+    public int setAtaque(){
+        return ataque=Dado.tirarDado(0,ataqueMaximo,1);
+    }
+
+    public void saludar(){
+        System.out.println("Soy una bestia, mi nombre es: "+this.getNombre());
     }
     
 }

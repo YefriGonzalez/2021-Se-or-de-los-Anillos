@@ -7,5 +7,9 @@ public class Trasgo extends Bestia{
         super(325, nombre,Dado.dadoParaCreacionPersonaje(50,70));
     }
     
+    @Override
+    public void saludar(){
+        System.out.println("Soy un Trasgo, mi nombre es: "+this.getNombre());
+    }
     
 }

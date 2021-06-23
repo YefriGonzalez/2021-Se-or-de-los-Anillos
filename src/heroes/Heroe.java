@@ -16,10 +16,13 @@ public class Heroe extends Ente {
         return heroesCreados;   
     }
 
-    public int getAtaque(){
-        return Dado.tirarDado(0,ataqueMaximo,2);
+    public int setAtaque(){
+        return ataque=Dado.tirarDado(0,ataqueMaximo,2);
     }
 
+    public void saludar(){
+        System.out.println("Soy un Heroe, mi nombre es: "+this.getNombre());
+    }
 
     
 }
